@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #0f172a;
+  color: white;
+}
+
+.login-container {
+  width: 350px;
+  margin: 100px auto;
+  background: #1e293b;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  background: #22c55e;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.dashboard {
+  padding: 30px;
+}
+
+.card {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.danger {
+  border-left: 5px solid red;
+}
+
+.alerts {
+  background: #7f1d1d;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+}

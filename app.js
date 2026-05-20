@@ -60,8 +60,18 @@ function updateGrid() {
       alerts += "<p>⚠ POSSIBLE ELECTRICITY THEFT</p>";
     }
 
+    let statusBar = document.getElementById("systemStatus");
+
     if (alerts === "") {
       alerts = "<p>✅ SYSTEM STABLE</p>";
+
+      statusBar.className = "status-bar status-normal";
+
+      statusBar.innerHTML = "SYSTEM STABLE";
+    } else {
+      statusBar.className = "status-bar status-danger";
+
+      statusBar.innerHTML = "FAULT DETECTED";
     }
 
     document.getElementById("alerts").innerHTML = alerts;

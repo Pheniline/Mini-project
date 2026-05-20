@@ -125,6 +125,8 @@ GridGuard was inspired by the need to modernize power infrastructure across Afri
 - SMS/Email alerts
 
 ---
+How to run it:
+Open with live server in index.html
  Kemboi Pheniline Jerono
 Electrical & Electronics Engineering Student
 

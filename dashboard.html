@@ -8,29 +8,27 @@
   </head>
   <body>
     <div class="dashboard">
-      <h1>GRIDGUARD CONTROL CENTER</h1>
+      <h1>GRIDGUARD LIVE CONTROL CENTER</h1>
 
       <div class="card">
-        <h2>Zone A</h2>
-        <p>Status: NORMAL</p>
-        <p>Voltage: 230V</p>
-        <p>Current: 12A</p>
-      </div>
+        <h2>Transformer Status</h2>
 
-      <div class="card danger">
-        <h2>Zone B</h2>
-        <p>Status: OVERLOAD</p>
-        <p>Voltage: 260V</p>
-        <p>Current: 20A</p>
+        <p><strong>Voltage:</strong> <span id="voltage">0 V</span></p>
+
+        <p><strong>Current:</strong> <span id="current">0 A</span></p>
+
+        <p><strong>Temperature:</strong> <span id="temperature">0 °C</span></p>
       </div>
 
       <div class="alerts">
         <h2>ALERTS</h2>
-        <ul>
-          <li>Transformer overheating</li>
-          <li>Unauthorized access detected</li>
-        </ul>
+
+        <div id="alerts">
+          <p>Loading...</p>
+        </div>
       </div>
     </div>
+
+    <script src="app.js"></script>
   </body>
 </html>

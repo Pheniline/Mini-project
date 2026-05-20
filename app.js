@@ -1,5 +1,6 @@
 function register() {
   let username = document.getElementById("username").value;
+
   let password = document.getElementById("password").value;
 
   localStorage.setItem("gridguardUser", username);
@@ -10,9 +11,11 @@ function register() {
 
 function login() {
   let storedUser = localStorage.getItem("gridguardUser");
+
   let storedPass = localStorage.getItem("gridguardPass");
 
   let loginUser = document.getElementById("loginUser").value;
+
   let loginPass = document.getElementById("loginPass").value;
 
   if (loginUser === storedUser && loginPass === storedPass) {
@@ -24,22 +27,36 @@ function login() {
   }
 }
 
+/* LIVE GRID SIMULATION */
+
 function randomValue(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 function updateGrid() {
   let voltage = randomValue(210, 250);
+
   let current = randomValue(5, 25);
+
   let temperature = randomValue(30, 90);
 
   let voltageElement = document.getElementById("voltage");
+
   let currentElement = document.getElementById("current");
+
   let temperatureElement = document.getElementById("temperature");
+
+  let alertsElement = document.getElementById("alerts");
+
+  let statusBar = document.getElementById("systemStatus");
+
+  /* ONLY RUN ON DASHBOARD */
 
   if (voltageElement) {
     voltageElement.innerHTML = voltage + " V";
+
     currentElement.innerHTML = current + " A";
+
     temperatureElement.innerHTML = temperature + " °C";
 
     let alerts = "";
@@ -60,7 +77,7 @@ function updateGrid() {
       alerts += "<p>⚠ POSSIBLE ELECTRICITY THEFT</p>";
     }
 
-    let statusBar = document.getElementById("systemStatus");
+    /* SYSTEM STATUS */
 
     if (alerts === "") {
       alerts = "<p>✅ SYSTEM STABLE</p>";
@@ -74,9 +91,11 @@ function updateGrid() {
       statusBar.innerHTML = "FAULT DETECTED";
     }
 
-    document.getElementById("alerts").innerHTML = alerts;
+    alertsElement.innerHTML = alerts;
   }
 }
+
+/* UPDATE EVERY 2 SECONDS */
 
 setInterval(updateGrid, 2000);
 

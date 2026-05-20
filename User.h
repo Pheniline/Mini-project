@@ -1,0 +1,17 @@
+#ifndef USER_H
+#define USER_H
+
+#include <iostream>
+using namespace std;
+
+class User {
+protected:
+    string username;
+    string password;
+
+public:
+    User(string u, string p);
+    bool login(string u, string p);
+};
+
+#endif
